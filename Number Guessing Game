@@ -1,0 +1,18 @@
+#python number guessing game
+#select random number from 1 to 100
+print('system is picking a number')
+import random
+x=random.randint(1,101)
+a=0
+c=0
+#while a is not equal to x loop
+while a!=x:
+    a=input('Pick a number from 1 to 100:')
+    a=int(a)
+    if a>x:
+        print('Too big, pick a smaller one')
+    elif a<x:
+        print('Too little, pick a bigger one')
+    c=c+1
+c=str(c)
+print('Congrats! you have tried '+ c +' times')
