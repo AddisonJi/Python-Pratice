@@ -1,0 +1,29 @@
+print("let's plan rock paper scissors")
+
+options=["r","p","s"]
+
+import random
+
+computer_choice=random.choice(options)
+
+user_choice=input("please select r,p or s ")
+
+if computer_choice==user_choice:
+    print("tie")
+else:
+    if user_choice =="r":
+        if computer_choice=="p":
+            print("computer win")
+        elif computer_choice=="s":
+            print("you win")
+    elif user_choice=="p":
+        if computer_choice=="r":
+            print("you win")
+        elif computer_choice=="s":
+            print("computer win")
+    elif user_choice=="s":
+        if computer_choice=="p":
+            print("you win")
+        elif computer_choice=="r":
+            print("computer win")
+print("computer chose " + computer_choice)
