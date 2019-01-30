@@ -1,0 +1,13 @@
+print("let's play number game")
+a=int(input("how many numbers to you want?"))
+c=[]
+for b in range(a):
+    c.append(b)
+    print(b)
+ifplay=input("do you want continue y?")
+if ifplay=="y":
+    z=int((len(c)))+int(input("how many more numbers?"))
+    for x in range(len(c),z):
+        print(x)
+else:
+    print("end game")
