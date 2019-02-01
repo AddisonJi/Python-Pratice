@@ -15,3 +15,23 @@ for x in range(allowance):
 print("I brought home with:")
 for y in candycart:
     print(y)
+    
+-------------------------------------------------------------------------------------------------------
+#if we don't want allowane, it depends on if the user want to shop more then the code become
+candyList = ["Snickers", "Kit Kat", "Sour Patch Kids", "Juicy Fruit", "Swedish Fish",
+             "Skittles", "Hershey Bar", "Starbursts", "M&Ms"]
+more="yes"
+candycart=[]
+while more=="yes":
+    for candy in candyList:             
+        print("[" +str(candyList.index(candy))+"]" + candy)
+        
+#to get the actual element in the list by knowing its index using listname[indecnumber]
+    candyno=input("which candy do you want?")
+    candycart.append(candyList[int(candyno)])
+    more=input("do you want more? yes or no")
+    #now printing the receipt of what I have
+print("I brought home with:")
+for y in candycart:
+    print(y)
+
