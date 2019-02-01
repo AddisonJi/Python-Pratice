@@ -1,0 +1,13 @@
+number=[0,0,0,0,0,0,0,0]
+pie_list = ["Pecan", "Apple Crisp", "Bean", "Banoffee", "Black Bun",
+           "Blueberry", "Buko", "Burek", "Tamale", "Steak"]
+for eachpie in pie_list:
+    print(str(pie_list.index(eachpie))+" "+eachpie)
+more="yes"
+while more=="yes":
+    pie=int(input("which pie do you want"))
+    more=input(("want more pie, yes or no"))
+   #pie_cart.append(pie_list[pie])
+    number[pie]=(number[pie]+1)
+for x in range(len(number)):
+    print(str(number[x])+" "+pie_list[x])
