@@ -1,0 +1,17 @@
+candyList = ["Snickers", "Kit Kat", "Sour Patch Kids", "Juicy Fruit", "Swedish Fish",
+             "Skittles", "Hershey Bar", "Starbursts", "M&Ms"]
+for candy in candyList:             
+    print("[" +str(candyList.index(candy))+"]" + candy)
+    
+allowance = 5
+
+candycart=[]
+
+#to get the actual element in the list by knowing its index using listname[indecnumber]
+for x in range(allowance):
+    candyno=input("which candy do you want?")
+    candycart.append(candyList[int(candyno)])
+#now printing the receipt of what I have
+print("I brought home with:")
+for y in candycart:
+    print(y)
