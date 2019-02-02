@@ -7,7 +7,10 @@ cereal_csv=os.path.join('..','pythonclass','cereal.csv')
 # reading is the default, if want to write a file then open(cereal_csv,"w",newline='')as csvfile
 with open(cereal_csv,newline='')as csvfile:
     csvreader=csv.reader(csvfile,delimiter=',')
+    
+    # this line can be skipped as well if only want the content
     print(csvreader)
+    
     # skip this line if there is no header
     csv_header=next(csvreader)
     print(f"CSV Header: {csv_header}")
