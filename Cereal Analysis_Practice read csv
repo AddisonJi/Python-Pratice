@@ -1,0 +1,17 @@
+import os
+import csv
+
+# os automatically detect the system I am using so doesn't matter if using a Mac or Windows 
+cereal_csv=os.path.join('..','pythonclass','cereal.csv')
+
+# reading is the default, if want to write a file then open(cereal_csv,"w",newline='')as csvfile
+with open(cereal_csv,newline='')as csvfile:
+    csvreader=csv.reader(csvfile,delimiter=',')
+    print(csvreader)
+    # skip this line if there is no header
+    csv_header=next(csvreader)
+    print(f"CSV Header: {csv_header}")
+    
+    for row in csvreader:
+        if float(row[7])>=5:
+            print(row[0])
