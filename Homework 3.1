@@ -42,9 +42,12 @@ with open(pybank_csv, newline="") as csvfile:
     #greatest increase and decrease
     Gincrease=max(thirdlist)
     Gdecrease=min(thirdlist)
+
+    #find the actual dollar amount by finding the index of the list that removed the first element
     GIn=str(newlist[thirdlist.index(Gincrease)])
     GDe=str(newlist[thirdlist.index(Gdecrease)])
 
+#find the date of the greatest increase and decrease
 with open(pybank_csv, newline="") as csvfile:
     readagain = csv.reader(csvfile, delimiter=",")
 
@@ -59,11 +62,18 @@ with open(pybank_csv, newline="") as csvfile:
     a=GInDate[:4]+ "20"+ GInDate[4:len(GInDate)] #format to Feb-2012
     b=GDeDate[:4]+ "20"+ GDeDate[4:len(GInDate)] #format to Sep-2013
 
-
+#print the report in terminal
 print("Financial Analysis")
 print("--------------------------------------")
 print(f"Total Months: {totalmonth}")
-print(f" Total: ${net}")
+print(f"Total: ${net}")
 print(f"Average  Change: ${averagechange}")
 print(f"Greatest Increase in Profits: {a} (${Gincrease})")
 print(f"Greatest Decrease in Profits: {b} (${Gdecrease})")
+
+#create the txt output
+nf=open("outputPybank.txt","w")
+lines=["Financial Analysis\n","--------------------------------------\n",f"Total Months: {totalmonth}\n", f"Total: ${net}\n",f"Average  Change: ${averagechange}\n",
+f"Greatest Increase in Profits: {a} (${Gincrease})\n",f"Greatest Decrease in Profits: {b} (${Gdecrease})"]
+nf.writelines(lines)
+nf.close()
